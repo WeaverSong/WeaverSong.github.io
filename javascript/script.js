@@ -148,7 +148,7 @@ function computeOutput(data)
         for (var i = 0; i < data.value.blocks.value.value.length; i++)
         {
             let block = data.value.blocks.value.value[i];
-            debugger;
+            //debugger;
             predicate.push({
                 "condition": "minecraft:location_check",
                 "offsetX": block.pos.value.value[0],

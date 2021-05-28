@@ -12,9 +12,9 @@ document.getElementById('uploadButton').addEventListener('change', () =>
 
     //console.log(data);
 });
-document.getElementById('cars').addEventListener('change', () =>
+document.getElementById('version').addEventListener('change', () =>
 {
-    version = document.getElementById('cars').value;
+    version = document.getElementById('version').value;
     computeOutput(file);
 });
 

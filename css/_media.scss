@@ -1,0 +1,119 @@
+@media only screen and (max-width: 1110px) {
+    .control-form-container {
+        .control-form {
+            &__label {
+                font-size: 1.5rem;
+            }
+            &__select {
+                padding: .3em 4em;
+                font-size: 1rem;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .control-form-container {
+        .control-form {
+            max-width: 50vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .credit {
+        &__icon {
+            margin-left: 0.1em;
+        }
+        &__title {
+            color: rgb(238, 238, 238);
+            font-size: 2rem;
+            margin-right: 1em;
+            margin-left: 0.5em;
+        }
+        &__name {
+            color: rgb(255, 208, 0);
+            font-size: 1.2rem;
+            margin-left: auto;
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .credit {
+        &__icon {
+            margin-left: 0.1em;
+        }
+        &__title {
+            color: rgb(238, 238, 238);
+            font-size: 2rem;
+            margin-right: 1em;
+            margin-left: 0.5em;
+        }
+        &__name {
+            color: rgb(255, 208, 0);
+            font-size: 1.2rem;
+            margin-left: auto;
+        }
+    
+    }
+    .control-form-container {
+        .control-form {
+            max-width: 70vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .credit {
+        &__icon {
+            display: None;
+        }
+        &__name {
+            margin-right: 0.5em;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 340px) {
+    .credit {
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__name {
+            font-size: 1rem;
+        }
+    }
+    .description {
+        font-size: 0.7rem;
+    }
+    .control-form-container {
+        .control-form {
+            &__label {
+                font-size: 1rem;
+            }
+            &__select {
+                padding-left: 0;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .downloadButton {
+        font-size: 0.7rem;
+    }
+    .copyButton {
+        font-size: 0.7rem;
+    }
+    .footer {
+        max-height: 12vh;
+        p {
+            font-size: 0.7rem;
+            span {
+                font-size: 0.3rem;
+            }
+        }
+    }
+}

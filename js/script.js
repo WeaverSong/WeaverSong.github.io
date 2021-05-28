@@ -2,6 +2,12 @@ let version = "1.16";
 let file;
 let result;
 
+const outputText = document.querySelector(".outputText");
+const downloadButton = document.querySelector(".downloadButton");
+const copyButton = document.querySelector(".copyButton");
+const downloadFile = document.getElementById("downloadFile");
+
+
 document.getElementById('uploadButton').addEventListener('change', () =>
 {
     var data = document.getElementById('uploadButton').files[0];
@@ -18,7 +24,6 @@ document.getElementById('version').addEventListener('change', () =>
     computeOutput(file);
 });
 
-const outputText = document.getElementById("outputText");
 
 outputText.addEventListener("dblclick", function ()
 {
@@ -33,19 +38,23 @@ outputText.addEventListener("dblclick", function ()
     selection.addRange(range);
 });
 
-document.getElementById("selectButton").addEventListener("click", function ()
-{
-    document.getElementById("uploadButton").click();
-});
-
-const downloadButton = document.getElementById("downloadButton");
-const downloadFile = document.getElementById("downloadFile");
-
 downloadButton.addEventListener("click", function ()
 {
-    if (downloadButton.className.includes("hide")) return;
-
     downloadFile.click();
+});
+copyButton.addEventListener("click", function ()
+{
+    navigator.clipboard.writeText(result).then(function ()
+    {
+        if (result) copyButton.textContent = "Copied!"
+
+        setTimeout(function (){ copyButton.textContent = "Copy"; }, (1000));
+    }, function ()
+    {
+        copyButton.textContent = "Something went wrong"
+
+        setTimeout(function (){ copyButton.textContent = "Copy"; }, (1000));
+    });
 });
 
 function handleFileLoad(data)

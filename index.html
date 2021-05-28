@@ -1,34 +1,65 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>NBT to predicate</title>
-	<link type="text/css" rel="stylesheet" href="styles.css" />
-	<link rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicate Generator</title>
+    <link rel = "icon" href = "img/credit-icon-img.png" type = "image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-	<center>
-		<div id="controls">
-			<label for="version">Version :</label>
-			<select name="version" id="version">
-				<option value="1.16">1.16</option>
-				<option value="1.17">1.17</option>
-			</select>
-			<input type="file" id="uploadButton" class="hidden" />
-			<input id="selectButton" type="button" value="Select a file" />
-			
-			<a id="downloadFile" download="predicate.json" class="hidden"></a>
-			<input id="downloadButton" class="hide" type="button" value="Download" />
-		</div>
 
-		<pre id="outputText" class="source"></pre>
-	</center>
+<header>
+    <div class="header">
+        <div class="credit">
+            <h2 class="credit__title">Predicate Generator</h2>
+            <h2 class="credit__name">by WeaverSong</h2>
+            <img src="img/credit-icon-img.png" alt="WeaverSong Icon" class="credit__icon">
+        </div>
+    </div>  
+</header> 
+<main>
+    <section class="desc-section">
+        <p class="description">Select a <span class=nbt_file>.nbt</span> file to generate predicate!</p>
+    </section>
+    <div class="main-bg">
+        <section class="control-section">
+            <div class="control-form-container">
+                <form action="/" class="control-form">
+                    <label class="control-form__label" for="version">Version :</label>
+                    <select name="version" id="version" class="control-form__select">
+                        <option value="1.16">1.16</option>
+                        <option value="1.17">1.17</option>
+                    </select>
+                    <label class="control-form__button">
+                        <input type="file" id="uploadButton" style="display: None;">
+                        <h3>Import file</h3>
+                    </label>
+                </form>
+            </div>
+        </section>
+        <section class="output-section">
+            <pre class="outputText" class="source"></pre>
+            <div class="output-button">
+                <a id="downloadFile" download="predicate.json"></a>
+                <button type="button" class="downloadButton">Download</button>
+                <button type="button" class="copyButton"">Copy</button>
+            </div>
+        </section>
+    </div>
 
-	<script src="./javascript/gunzip.min.js"></script>
-	<script src="./javascript/nbt.js"></script>
-	<script src="./javascript/script.js"></script>
+</main>
+
+<footer>
+    <div class="footer">
+        <p>@ Made by WeaverSong <span> Web Design by WingedSeal</span></p>
+    </div>
+</footer>
+
+<script src="js/gunzip.min.js"></script>
+<script src="js/nbt.js"></script>
+<script src="js/script.js"></script>
 </body>
-
 </html>

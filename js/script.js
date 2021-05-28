@@ -46,14 +46,12 @@ copyButton.addEventListener("click", function ()
 {
     navigator.clipboard.writeText(result).then(function ()
     {
-        if (result) copyButton.textContent = "Copied!"
+        if (result) copyButton.textContent = "Copied!";
 
         setTimeout(function (){ copyButton.textContent = "Copy"; }, (1000));
     }, function ()
     {
-        copyButton.textContent = "Something went wrong"
-
-        setTimeout(function (){ copyButton.textContent = "Copy"; }, (1000));
+        window.alert("Couldn't copy to clipboard.");
     });
 });
 
